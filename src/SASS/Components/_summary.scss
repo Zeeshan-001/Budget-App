@@ -1,0 +1,88 @@
+.summary {
+	&__container {
+		height: 75vh;
+
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+		background: #29323c;
+		background: -webkit-linear-gradient(to left, #29323c, #485563);
+		background: linear-gradient(to left, #29323c, #485563);
+	}
+
+	&__content {
+		padding: 0rem 5rem;
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.summary--trans {
+		&__heading {
+			padding-bottom: 0.8rem;
+		}
+
+		&__income,
+		&__expense,
+		&__categorie,
+		&__balance {
+			display: grid;
+			justify-items: center;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__income,
+		&__expense {
+			font-size: 2.2rem;
+			letter-spacing: 2px;
+		}
+
+		&__income span {
+			color: $color-income;
+		}
+
+		&__expense span {
+			color: $color-expense;
+		}
+
+		&__categories {
+			height: 27rem;
+			list-style: none;
+			overflow-y: scroll;
+			display: flex;
+			gap: 1px;
+			flex-direction: column;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+				rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+		}
+
+		&__categorie {
+			font-size: 1.3rem;
+			letter-spacing: 2px;
+			font-weight: 400;
+			padding: 0.5rem 0;
+			text-transform: capitalize;
+
+			background: #485563;
+			background: -webkit-linear-gradient(to bottom left, #29323c, #485563);
+			background: linear-gradient(to bottom left, #29323c 0.6, #485563);
+		}
+
+		&__balance {
+			font-size: 2.2rem;
+			letter-spacing: 2px;
+			border-top: 1px dashed $color-primary-light;
+
+			& span {
+				color: $color-balance;
+			}
+		}
+	}
+
+	.summary__btns {
+		display: flex;
+		justify-content: space-around;
+	}
+}
