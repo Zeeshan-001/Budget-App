@@ -1,20 +1,20 @@
-import React from 'react';
+// import React from "react";
 
-function ShowDate(props) {
-	const options = {
-		day: 'numeric',
-		weekday: 'long',
-		month: 'long',
-		year: 'numeric',
-	};
+// function ShowDate(props) {
+//   const options = {
+//     day: "numeric",
+//     weekday: "long",
+//     month: "long",
+//     year: "numeric",
+//   };
 
-	const getLiveDate = () => {
-		return new Intl.DateTimeFormat(navigator.language, options).format(
-			new Date()
-		);
-	};
+//   const getLiveDate = () => {
+//     return new Intl.DateTimeFormat(navigator.language, options).format(
+//       new Date()
+//     );
+//   };
 
-	return <div className='liveDate'>{getLiveDate()}</div>;
-}
+//   return <div className="liveDate">{getLiveDate()}</div>;
+// }
 
-export default ShowDate;
+// export default ShowDate;
