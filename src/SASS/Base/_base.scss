@@ -11,23 +11,16 @@ html {
 
 body {
   line-height: 1.6;
-  letter-spacing: 0.8px;
   font-weight: 400;
-  color: #fff;
+  color: $color-primary;
   font-family: $font-primary;
 }
 
 .container {
-  width: 100%;
-  height: calc(100vh - 8rem);
-
-  padding: 2rem 4rem;
-
-  background: #bdc3c7;
-  background: -webkit-linear-gradient(to bottom left, #2c3e50, #bdc3c7);
-  background: linear-gradient(to bottom left, #2c3e50, #bdc3c7);
+  width: 100vw;
+  height: 100vh;
+  background: #e0e1e3;
 
   display: grid;
-  gap: 8rem;
   grid-template-columns: 2fr 1fr;
 }

@@ -1,34 +1,30 @@
 import React, { useState } from "react";
 import { BiDetail } from "react-icons/bi";
 import { AiOutlineTransaction } from "react-icons/ai";
-import { TbReportAnalytics } from "react-icons/tb";
-import { BiCategoryAlt } from "react-icons/bi";
 import { MdOutlineEuroSymbol } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-  const [selected, setselected] = useState("summary");
+  const [selectedItem, setselectedItem] = useState("Überblick");
 
-  const nav_icons = [
-    <BiDetail />,
-    <AiOutlineTransaction />,
-    <TbReportAnalytics />,
-    <BiCategoryAlt />,
+  const nav_items = [
+    { label: "Überblick", icon: <BiDetail /> },
+    { label: "Transaktionen", icon: <AiOutlineTransaction /> },
   ];
 
-  const nav_items = ["summary", "transactions", "report", "categories"];
-
-  const selectItem = (item) => {
-    setselected(item);
+  const handelSelectNavItem = (item) => {
+    setselectedItem(item.label);
   };
 
   const items = nav_items.map((item, i) => (
-    <li key={i} onClick={() => selectItem(item)}>
+    <li key={i} onClick={() => handelSelectNavItem(item)}>
       <Link
-        to={"/" + item}
-        className={item === selected ? "navbar__link active" : "navbar__link"}
+        to={"/" + item.label}
+        className={
+          item.label === selectedItem ? "navbar__link active" : "navbar__link"
+        }
       >
-        {nav_icons[i]} {item}
+        {item.icon} {item.label}
       </Link>
     </li>
   ));

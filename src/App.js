@@ -1,6 +1,5 @@
 import "./SASS/App.scss";
 import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
 import TransContext from "./store/trans-context";
 import Summary from "./components/Summary/Summary";
 import DeleteModel from "./components/Portals/DeleteModel";
@@ -177,8 +176,6 @@ function App(props) {
 
   return (
     <TransContext.Provider value={transContext}>
-      <Navbar />
-
       {transModelShow && <AddTransModel />}
       {delModal && <DeleteModel />}
 

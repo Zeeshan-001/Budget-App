@@ -1,7 +1,11 @@
+.transactions__container {
+  background-color: #fff;
+}
+
 .transactions {
   list-style: none;
-  height: 75vh;
   overflow-y: scroll;
+  background-color: #fff;
 
   &__empty {
     padding: 1.2rem 1rem;
@@ -16,10 +20,6 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
-    background: #485563;
-    background: -webkit-linear-gradient(45deg, #29323c, #485563);
-    background: linear-gradient(45deg, #29323c, #485563);
 
     position: relative;
     padding: 0.6rem;

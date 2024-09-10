@@ -1,14 +1,14 @@
 import React from "react";
 import LineChart from "../Chart/LineChart";
-import SummaryBtns from "./SummaryBtns";
 import SummaryTrans from "./SummaryTrans";
+import LinearChart from "./linearChart";
 
 function SummaryContent(props) {
   return (
     <div className="summary__content">
-      <LineChart />
+      {/* <LineChart /> */}
       <SummaryTrans />
-      <SummaryBtns />
+      <LinearChart />
     </div>
   );
 }

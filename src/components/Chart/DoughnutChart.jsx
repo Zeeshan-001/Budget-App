@@ -1,5 +1,5 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { useContext } from "react";
 import TransContext from "../../store/trans-context";
@@ -40,7 +40,7 @@ function DoughnutChart(props) {
           "rgba(240, 150, 153, 0.8)",
         ],
 
-        borderWidth: 0.8,
+        borderWidth: 0.6,
       },
     ],
   };
@@ -62,7 +62,8 @@ function DoughnutChart(props) {
 
   return (
     <div className="doughnutChart">
-      <Doughnut data={data} options={options} />
+      <h3 className="heading--four">Ausgaben-Diagramm</h3>
+      <Pie data={data} options={options} />
     </div>
   );
 }
